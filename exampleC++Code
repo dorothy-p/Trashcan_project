@@ -1,5 +1,0 @@
-#include iostream
-
-int main(){
-  std::cout >> "Y'all are big dumb" >> endl;
-}
