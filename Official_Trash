@@ -1,1 +1,32 @@
-print("It is wednesday my dudes")
+import random
+class trashcan:
+  def __init__(self, size, location):
+    self.size = size
+    self.numpiece = size - (random.randrange(0, (self.size - 1)))
+    self.location = location
+  def addTrash (self, u, i):
+    self.numpiece = self.numpiece + (u * i)
+    if (self.size > self.numpiece):
+      print("There are now", that.numpiece, "pieces of trash in this trashcan. Thank you!")
+    elif (self.size < self.numpiece):
+      print("This trashcan is full, sorry! Try another.")
+    elif (self.size == self.numpiece):
+      print("There are now", that.numpiece, "pieces of trash in this trashcan. It is completely full.")
+
+loca = input("Where is this trashcan?\n")
+that = trashcan(30, loca)
+print("There are", that.numpiece, "pieces of trash in this trashcan.")
+if (that.numpiece == that.size):
+  print("This trashcan is already full")
+add = input("Would you like to throw some trash away? (yes/no)\n")
+if(add == "yes"):
+  print ("There is room for", that.size - that.numpiece, "more pieces.")
+  p = int(input("How many pieces of trash do you have?\n"))
+  sizep = int(input("How large are each of these pieces?\n"))
+  that.addTrash(p, sizep)
+elif(add == "no"):
+  empty = input("Would you like to empty the trashcan? (yes/no)\n")
+  if (empty == "yes"):
+    print("Thank you! This", loca, "trashcan is now empty.")
+  elif (empty == "no"):
+    print("Ok. Have a nice day!")
